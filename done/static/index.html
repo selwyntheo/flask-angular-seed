@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Done</title>
+
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <link href="/css/styles.css" rel="stylesheet"> 
+  <link href="/css/all.css" rel="stylesheet">
+  <link href="/css/app.css" rel="stylesheet">
+  <link href="/css/angular-toastr.css" rel="stylesheet">
+  <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="st-container">
+
+    <div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><i class="ion-ios7-pulse-strong"></i> DoneMetrics</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li ng-if="isAuthenticated()"><a href="/#/tasks">Kanban</a></li>
+        <li ng-if="isAuthenticated()"><a href="/#/profile">Profile</a></li>
+        <li ng-if="isAuthenticated()"><a href="/#/overview">Overview</a></li>
+        
+      </ul>
+      <ul ng-if="!isAuthenticated()" class="nav navbar-nav pull-right">
+        <li><a href="/#/login">Login</a></li>
+        <li><a href="/#/signup">Sign up</a></li>
+      </ul>
+      <ul ng-if="isAuthenticated()" class="nav navbar-nav pull-right">
+        <li><a href="/#/logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="container-fluid">
+      <div ui-view></div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- Third-party Libraries -->
+
+
+<script src="/js/lib/jquery/dist/jquery.min.js"></script>
+<script src="/js/lib/jquery-ui/ui/jquery-ui.js"></script>
+<script src="/js/lib/ace-builds/src-min-noconflict/ace.js"></script>
+
+<script src="/js/lib/angular/angular.js"></script>
+<script src="/js/lib/angular-animate/angular-animate.js"></script>
+<script src="/js/lib/angular-messages/angular-messages.js"></script>
+<script src="/js/lib/angular-resource/angular-resource.js"></script>
+<script src="/js/lib/angular-sanitize/angular-sanitize.js"></script>
+<script src="/js/lib/angular-ui-router/release/angular-ui-router.js"></script>
+
+
+<script src="/js/lib/lodash/dist/lodash.min.js"></script>
+<script src="/js/lib/moment/min/moment.min.js"></script>
+<script src="/js/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+<script src="/js/lib/angular-ui-calendar/src/calendar.js"></script>
+<script src="/js/lib/fullcalendar/fullcalendar.min.js"></script>
+<script src="/js/lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+<script src="/js/lib/angular-ui-ace/ui-ace.min.js"></script>
+<script src="/js/lib/showdown/compressed/showdown.js"></script>
+<script src="/js/lib/angular-ui-grid/ui-grid.min.js"></script>
+<script src="/js/lib/csv-js/csv.js"></script>
+<script src="/js/lib/angular-ui-select/dist/select.min.js"></script>
+<script src="/js/lib/angular-ui-alias/src/alias.js"></script>
+
+
+<script src="/js/angular-toastr.tpls.js"></script>
+<script src="/js/lib/satellizer/satellizer.js"></script>
+
+
+
+
+<script src="/js/ng-google-chart.js"></script>
+
+<!-- Application Code -->
+<script src="js/ng-app/app.js"></script>
+
+<script src="js/ng-app/directives/passwordStrength.js"></script>
+<script src="js/ng-app/directives/passwordMatch.js"></script>
+
+
+<script src="js/ng-app/controllers/home.js"></script>
+<script src="js/ng-app/controllers/login.js"></script>
+<script src="js/ng-app/controllers/signup.js"></script>
+<script src="js/ng-app/controllers/logout.js"></script>
+<script src="js/ng-app/controllers/profile.js"></script>
+
+<script src="js/ng-app/controllers/navbar.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<div class="login">
+  <div id="content">
+    <div class="container-fluid">
+      <div class="lock-container">
+        <div class="panel panel-default text-center paper-shadow" data-z="0.5">
+          <h1 class="text-display-1 text-center margin-bottom-none">Sign In</h1>
+            <div class="panel-body">
+              <form class="form-signin" role="form" method="post" ng-submit="login()" name="loginForm">
+                <div class="form-group has-feedback">
+                  <div class="form-control-material">
+                    <input class="form-control input-lg" type="text" name="email" ng-model="user.email" placeholder="Email" required autofocus>
+                    <label for="username">Username</label>
+                  </div>
+                </div>
+                <div class="form-group has-feedback">
+                  <div class="form-control-material">
+                    <input class="form-control input-lg" type="password" name="password" ng-model="user.password" placeholder="Password" required>
+                     <label for="password">Password</label>
+                  </div>
+                </div>
+                <button type="submit"  class="btn btn-primary" class="fa fa-fw fa-unlock-alt" ng-disabled="loginForm.$invalid" >Log in</button>
+                <br/>
+                <p class="text-center text-muted">
+                  <small>Don't have an account yet? <a href="/#/signup">Sign up</a></small>
+                </p>
+              </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
